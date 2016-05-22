@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head >
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>GALE</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/AngularJS")
+    <script src="~/Scripts/app/module.js"></script>
+    <script src="~/Scripts/app/service.js"></script>
+    <script src="~/Scripts/app/MonitoringController.js"></script>
+    @Scripts.Render("~/bundles/RequiredJS")
+    @*<base href="~/Views/Home/" />*@
+</head>
+<body>
+    <div class="container-fluid no-gap">
+        <div>
+            @Html.Partial("_Header")
+        </div>
+
+        <div class="row col-md-12 col-sm-12 col-xs-12 no-gap" style="position:absolute">
+            @*<div class="header col-md-2 col-sm-2 col-xs-2 no-gap" style="position:relative;top:60px;">
+                @Html.Partial("_SideNav")
+            </div>*@
+            <div class="col-md-12 col-sm-12 col-xs-12 no-gap" style="position:relative;top:40px; padding-left:0px;">
+                <div id="body" style="background-color:white; height:100%;width:98%; position:relative" >
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+        <div class="footer navbar navbar-default navbar-fixed-bottom">
+            <footer>
+                <table class="col-md-12 col-sm-12 col-xs-12">
+                    <tr>
+                        <td class="text-center">
+                            All Rights Reserved to &copy; Roshan @DateTime.Now.Year
+                        </td>
+                    </tr>
+                </table>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

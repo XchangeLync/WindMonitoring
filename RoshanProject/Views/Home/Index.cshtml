@@ -1,0 +1,101 @@
+﻿@{
+    ViewBag.Header = "Wind Monitoring System";
+}
+
+<div class="container-fluid no-gap" ng-app="GaleApp" ng-controller="monitoringController">
+    <h3 style="text-align:center" class="pageHeader">{{pageHeader}}</h3>
+    <br/>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 form-group">
+            <label class="control-label pull-right">State</label>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 form-group">
+            <select ng-model="state.Code" ng-options="state.Code as state.Name for state in states"
+                    ng-change="getStateCities()" ng-required="true">
+                <option value=''>Select</option>
+            </select>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 form-group">
+            <label class="control-label pull-right">City</label>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 form-group">
+            <select ng-model="city.Code" ng-disabled="!cities" ng-options="city.Code as city.Name for city in cities"
+                    ng-required="true" ng-change="getCityStation()">
+                <option value=''>Select</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 form-group">
+            <label class="control-label pull-right">Station Code</label>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 form-group">
+            <input type="text" disabled ng-model="stationCode" />
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 form-group">
+            <label class="control-label pull-right">Date</label>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 form-group">
+            <input id="datepicker" type="text" ng-datepicker ngOptions="datepickerOptions" ng-model="date" /><a href="#" ng-click="toggleTable()" ng-model="visible" aria-label="Toggle ngHide">History Data</a>
+        </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 form-group">
+            <label class="control-label pull-right">Predicted Speed(Km/h)</label>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 form-group">
+            <input type="text" disabled ng-model="predictedSpeed" />
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 form-group">
+            <label class="control-label pull-right">Actual Speed(Km/h)</label>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 form-group">
+            <input type="text" id="actualSpeed" ng-model="actualSpeed" ng-blur="getVariance()" />
+        </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 form-group">
+            <label class="control-label pull-right">Variance</label>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 form-group">
+            <input type="text" disabled ng-model="variance" class='{{varianceColor}}' />
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 form-group">
+            &nbsp;
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 form-group">
+            <input type="button" class="btn-sm btn-success" value="Save" ng-click="saveData()" />
+            &nbsp;&nbsp;
+            <input type="button" class="btn-sm btn-danger" value="Cancel" ng-click="clearData()" />
+        </div>
+    </div>
+
+    <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-2 col-lg-8 col-md-8 col-sm-8 col-xs-8" ng-show="visible">
+        <table id="tblWindData" class="table table-condensed">
+            <thead>
+                <tr>
+                    <th>State</th>
+                    <th>City</th>
+                    <th>Station</th>
+                    <th>Date</th>
+                    <th>Predicted Speed</th>
+                    <th>Actual Speed</th>
+                    <th>Variance</th>
+                </tr>
+            </thead>
+            <tbody ng-repeat="data in tableData">
+                <tr>
+                    <td>{{data.state}}</td>
+                    <td>{{data.city}}</td>
+                    <td>{{data.station}}</td>
+                    <td>{{data.date}}</td>
+                    <td>{{data.predictedSpeed}}</td>
+                    <td>{{data.actualSpeed}}</td>
+                    <td>{{data.variance}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div>{{error}}</div>
+</div>

@@ -1,0 +1,9 @@
+D:\Roshan\My Projects\GM.Web\GM.Business.Entity\bin\Debug\GM.Business.Entity.dll
+D:\Roshan\My Projects\GM.Web\GM.Business.Entity\bin\Debug\GM.Business.Entity.pdb
+D:\Roshan\My Projects\GM.Web\GM.Business.Entity\obj\Debug\GM.Business.Entity.dll
+D:\Roshan\My Projects\GM.Web\GM.Business.Entity\obj\Debug\GM.Business.Entity.pdb
+D:\Roshan\My Projects\RoshanProject\Business.Entity\bin\Debug\GM.Business.Entity.dll
+D:\Roshan\My Projects\RoshanProject\Business.Entity\bin\Debug\GM.Business.Entity.pdb
+D:\Roshan\My Projects\RoshanProject\Business.Entity\obj\Debug\GM.Business.Entity.dll
+D:\Roshan\My Projects\RoshanProject\Business.Entity\obj\Debug\GM.Business.Entity.pdb
+D:\Roshan\My Projects\RoshanProject\Business.Entity\obj\Debug\GM.Business.Entity.csprojResolveAssemblyReference.cache

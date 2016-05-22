@@ -1,0 +1,10 @@
+D:\Roshan\My Projects\RoshanProject\Project.Data.Model\bin\Debug\Project.Data.Model.dll.config
+D:\Roshan\My Projects\RoshanProject\Project.Data.Model\bin\Debug\Project.Data.Model.dll
+D:\Roshan\My Projects\RoshanProject\Project.Data.Model\bin\Debug\Project.Data.Model.pdb
+D:\Roshan\My Projects\RoshanProject\Project.Data.Model\bin\Debug\EntityFramework.dll
+D:\Roshan\My Projects\RoshanProject\Project.Data.Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\Roshan\My Projects\RoshanProject\Project.Data.Model\bin\Debug\EntityFramework.xml
+D:\Roshan\My Projects\RoshanProject\Project.Data.Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\Roshan\My Projects\RoshanProject\Project.Data.Model\obj\Debug\Project.Data.Model.dll
+D:\Roshan\My Projects\RoshanProject\Project.Data.Model\obj\Debug\Project.Data.Model.pdb
+D:\Roshan\My Projects\RoshanProject\Project.Data.Model\obj\Debug\Project.Data.Model.csprojResolveAssemblyReference.cache
